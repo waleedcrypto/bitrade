@@ -1,0 +1,20 @@
+body { 
+    background: radial-gradient(circle at top right, #1a1c24, #0a0b0d); 
+    color: white; 
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+}
+.neon-text { color: #00e676; }
+.glass-card { 
+    background: rgba(20, 21, 26, 0.8); 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+}
+.neon-btn { 
+    background: linear-gradient(135deg, #00e676 0%, #00c853 100%);
+    color: #000; font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 230, 118, 0.3);
+}
+input { background: #16181d !important; border: 1px solid #2d313a !important; color: white !important; }
+.timer-box { background: rgba(0, 0, 0, 0.4); border-radius: 12px; border: 1px solid rgba(0, 230, 118, 0.1); }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitrade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="p-4">
+    <div class="max-w-md mx-auto">
+        <header class="flex justify-between items-center py-6">
+            <h1 class="text-2xl font-bold neon-text">Bitrade</h1>
+            {% if session['user'] %}
+                <div class="flex gap-2">
+                    {% if session['user'] == admin_addr %}<a href="/admin" class="bg-red-600 px-2 py-1 rounded text-[10px]">ADMIN</a>{% endif %}
+                    <a href="/logout" class="text-gray-500 text-xs">Exit</a>
+                </div>
+            {% endif %}
+        </header>
+        {% block content %}{% endblock %}
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
